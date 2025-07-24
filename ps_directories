@@ -1,0 +1,30 @@
+Files and Directory Operations
+
+dir – Lists files and folders in a directory.
+cd – Changes the current directory.
+copy, xcopy, robocopy – Copies files and directories.
+del – Deletes files.
+mkdir / rmdir – Creates or removes directories
+
+Get-Item -Path "C:\Path\to\your\folder"
+
+wildcard character (*) to display all properties.
+Get-Item -Path "C:\Path\To\Your\Folder" | Select-Object *
+
+Select-Object cmdlet with the Property parameter. 
+Get-Item -Path "C:\Path\To\Your\Folder" | Select-Object Name, CreationTime, LastWriteTime
+
+hidden files you can specify the "Hidden" attribute
+Get-ChildItem -Path "C:\Path\To\Your\Folder" -Attributes Hidden
+
+
+Get-FileHash -Path "C:\Path\To\Your\File.txt"
+
+Find all .txt files a folder:
+Get-ChildItem -Path "C:\Data" -Filter "*.txt" 
+
+Find all notes.txt files its subdirectories
+Get-ChildItem -Path "C:\temp\" -Filter "Notes.txt" -Recurse
+
+
+
