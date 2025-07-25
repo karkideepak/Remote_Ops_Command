@@ -1,0 +1,2 @@
+// Display all mounted drives
+gdr -PSProvider 'FileSystem' 
