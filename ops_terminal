@@ -1,0 +1,2 @@
+>> $file = Get-Item "Sha_value_of_file"
+>> $file.LastWriteTime
