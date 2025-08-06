@@ -1,1 +1,1 @@
-
+Get-ChildItem -Directory -Recurse | Where-Object { $_.Name -like "*libre*" }
