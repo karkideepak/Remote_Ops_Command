@@ -26,5 +26,8 @@ Get-ChildItem -Path "C:\Data" -Filter "*.txt"
 Find all notes.txt files its subdirectories
 Get-ChildItem -Path "C:\temp\" -Filter "Notes.txt" -Recurse
 
+Current Working Directory
+Get-ChildITem -Filter 'filename'
+
 
 
