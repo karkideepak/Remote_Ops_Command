@@ -1,0 +1,14 @@
+Get-Item filename | Format-List *
+
+# hash it
+Get-FileHash filename
+
+
+Get-ChildItem -File | ForEach-Object {
+    $hash = Get-FileHash $_.FullName -Algorithm SHA1
+
+    [PSCustomObject]@{
+        Path = $_.FullName
+        SHA1 = $hash.Hash
+    }
+}
